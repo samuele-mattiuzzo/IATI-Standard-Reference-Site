@@ -52,18 +52,24 @@ rm combined_sitemap.rst
 # - clones the SSOT into a subfolder, only copies back the items we need to build
 # - TODO: do the build from within the folder, without moving stuff around
 
-git clone -b "version-$VERSION" --single-branch "$IATI_SSOT_GIT_BASE$SSOT_REPO.git"
+git clone "$IATI_GIT_BASE$SSOT_REPO.git"
+
 cd $SSOT_REPO
+
+git checkout "version-$VERSION"
+
+git submodule init
+git submodule update
 
 for COMPONENT in "${SSOT_COMPONENTS[@]}"; do
 	if [ -d $COMPONENT ]; then
-		mv $COMPONENT ..
+		cp -r $COMPONENT ..
 	fi
 done
 
-mv templates ..
-mv combined_sitemap.rst ..
+cp -r templates ..
+cp -r combined_sitemap.rst ..
 
 cd ..
 
-rm -rf $SSOT_REPO
+#rm -rf $SSOT_REPO

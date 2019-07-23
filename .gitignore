@@ -106,7 +106,7 @@ pyenv*
 
 *.swp
 .DS_Store
-.vscode§
+.vscode
 
 # Output HTML folders
 _static/
