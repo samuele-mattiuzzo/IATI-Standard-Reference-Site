@@ -109,6 +109,8 @@ pyenv*
 .vscode§
 
 # Output HTML folders
+_static/
+_templates/
 docs/
 docs-copy/
 templates/
