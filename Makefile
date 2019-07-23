@@ -20,7 +20,7 @@ setup:
 
 reinstall_dependencies: clean_virtualenv setup
 
-dev_install: clean setup clone_components
+dev_install: clean_all setup clone_components
 
 live_install: dev_install
 
