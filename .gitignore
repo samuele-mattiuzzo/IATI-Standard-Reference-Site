@@ -111,6 +111,8 @@ pyenv*
 # Output HTML folders
 docs/
 docs-copy/
+templates/
+combined_sitemap.rst
 
 # IATI Theme (for generating a local version of the reference HTML with full IATI branding)
-IATI-Websites/
+IATI-*/
