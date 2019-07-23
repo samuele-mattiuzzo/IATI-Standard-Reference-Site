@@ -1,0 +1,35 @@
+#!/bin/bash
+# main git url
+IATI_GIT_BASE="https://github.com/IATI/"
+IATI_SSOT_GIT_BASE="https://github.com/samuele-mattiuzzo/"
+
+# main ssot components
+# the SSOT repo contains:
+# - Codelists
+# - Schemas
+# - Rulesets
+# - Extra Documentation
+SSOT_REPO="IATI-Standard-SSOT"
+
+SSOT_COMPONENTS=(
+	"IATI-Codelists"
+	"IATI-Schemas"
+	"IATI-Rulesets"
+	"IATI-Extra-Documentation"
+)
+
+# optional components
+OPTIONAL_COMPONENTS=(
+	"IATI-Extra-Documentation"
+	"IATI-Websites"
+	"IATI-Guidance"
+	"IATI-Developer-Documentation"
+)
+
+# used to retrieve the branches from the SSOT
+LATEST="2.03"
+
+ALL_VERSIONS=("2.01" "2.02" "2.03")
+
+# used to retrieve the branches from all the Extra components
+DEFAULT_BRANCH="live"
