@@ -14,9 +14,9 @@ clean_all: clean_virtualenv; \
 	rm -rf docs docs-copy
 
 setup:
-	virtualenv pyenv; \
+	virtualenv -p python3 pyenv; \
 	. pyenv/bin/activate; \
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 
 reinstall_dependencies: clean_virtualenv setup
 
@@ -26,7 +26,7 @@ live_install: dev_install
 
 run:
 	cd docs-copy/en/_build/dirhtml; \
-	python -m SimpleHTTPServer 8000; \
+	python3 -m http.server 8000; \
 	cd -
 
 switch_version:
