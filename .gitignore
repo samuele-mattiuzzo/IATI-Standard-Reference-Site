@@ -89,6 +89,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+pyenv*
 
 # Spyder project settings
 .spyderproject
@@ -102,3 +103,18 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.swp
+.DS_Store
+.vscode
+
+# Output HTML folders
+_static/
+_templates/
+docs/
+docs-copy/
+templates/
+combined_sitemap.rst
+
+# IATI Theme (for generating a local version of the reference HTML with full IATI branding)
+IATI-*/
