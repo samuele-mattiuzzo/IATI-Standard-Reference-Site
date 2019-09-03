@@ -72,4 +72,4 @@ cp -r combined_sitemap.rst ..
 
 cd ..
 
-#rm -rf $SSOT_REPO
+rm -rf $SSOT_REPO

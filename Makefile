@@ -31,7 +31,7 @@ run:
 
 switch_version:
 	. pyenv/bin/activate; \
-	bash scripts/main/clone_components.sh -v $1 -s
+	bash scripts/main/clone_components.sh $(VERSION) $(SSOT_ONLY)
 
 build_rst:
 	. pyenv/bin/activate; \
