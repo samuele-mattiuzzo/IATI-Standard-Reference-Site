@@ -14,7 +14,7 @@ clean_all: clean_virtualenv; \
 	rm -rf docs docs-copy
 
 setup:
-	virtualenv -p python3 pyenv; \
+	python3 -m venv pyenv; \
 	. pyenv/bin/activate; \
 	pip3 install -r requirements.txt
 
@@ -45,6 +45,10 @@ build_docs: build_rst build_html
 
 build_dev:
 	. pyenv/bin/activate; \
+	mkdir docs; \
+	cd docs; \
+	git init; \
+	cd -; \
 	bash scripts/main/combined_gen.sh
 
 build_live: build_dev
